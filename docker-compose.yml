@@ -1,0 +1,14 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+services:
+  miniblogapi:
+    image: miniblogapi
+    build:
+      context: .
+      dockerfile: src/MiniBlog.Api/Dockerfile
+    ports:
+      - 5137:5137
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
