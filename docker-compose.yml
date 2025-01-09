@@ -1,0 +1,10 @@
+services:
+  miniblogapi:
+    image: miniblogapi
+    build:
+      context: .
+      dockerfile: MiniBlog.Api/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 5229:5229
